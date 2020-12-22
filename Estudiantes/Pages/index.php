@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html>
-
 <head> 
     <title>SISTEMA DE NOTAS</title>
 </head>
@@ -33,8 +33,7 @@
             <td>
                 <a href="edit.php" target="_blank">Editar</a>
                 <a href="delete.php" target="_blank">Eliminar</a>
-            </td> 
-            
+            </td>            
         </tr>
     </table>
 
