@@ -1,6 +1,7 @@
 <html>
-<title>SISTEMA DE NOTAS</title>
+
 <head> 
+    <title>SISTEMA DE NOTAS</title>
 </head>
 <body> 
     <h1>Estudiantes </h1>
