@@ -22,7 +22,7 @@ class Usuarios extends Conexion{
             $_SESSION['PERFIL'] = $result['PERFIL'];
             return true;
         }
-        return falsehy;
+        return false;
     }
 
     public function getNombre(){
