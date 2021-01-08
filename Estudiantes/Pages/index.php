@@ -1,6 +1,6 @@
 <?php
     /*
-    Llamo la clase modelo de Usuarios para hacer uso del metodo de valiad sesion
+    Llamo la clase modelo de Usuarios para hacer uso del metodo de validar sesion
     de esta clase.
     */ 
     require_once('../../Usuarios/Modelo/Usuarios.php');
@@ -52,8 +52,8 @@
             <td><?php echo $Estudiante['PROMEDIO'] ?></td>
             <td><?php echo $Estudiante['FECHA_REGISTRO'] ?></td>
             <td>
-                <a href="edit.php" target="_blank">Editar</a>
-                <a href="delete.php" target="_blank">Eliminar</a>
+                <a href="edit.php?Id=<?php echo $Estudiante['ID_ESTUDIANTE'] ?>" target="_blank">Editar</a>
+                <a href="delete.php?Id=<?php echo $Estudiante['ID_ESTUDIANTE'] ?>" target="_blank">Eliminar</a>
             </td>            
         </tr>
         <?php

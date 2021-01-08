@@ -1,5 +1,8 @@
+<?php
+    echo $_GET['Id'];
+?>
+<!DOCTYPE html>
 <html>
-
 <head> 
     <title>SISTEMA DE NOTAS</title>
 </head>

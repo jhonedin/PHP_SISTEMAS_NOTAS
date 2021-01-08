@@ -1,5 +1,16 @@
-<html>
+<?php
+    require_once('../../Usuarios/Usuarios.php');
+    require_once('../Modelo/Estudiantes.php');
 
+    $ModeloUsuarios = new Usuarios();
+    $ModeloUsuarios->validateSession();
+
+    $Modelo = new Estudiante();
+    $Id = $_GET['Id'];
+    $InformacionEstudiante = $Modelo->getById($Id);
+?>
+<!DOCTYPE html>
+<html>
 <head> 
     <title>SISTEMA DE NOTAS</title>
 </head>
