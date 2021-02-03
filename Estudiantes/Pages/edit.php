@@ -46,7 +46,7 @@
             if($Materias != null){
                 foreach($Materias as $Materia){
             ?>
-            <option value="<?php echo $Info['MATERIA'] ?>"><?php echo $Info['MATERIA'] ?></option>
+            <option value="<?php echo $Materia['MATERIA'] ?>"><?php echo $Materia['MATERIA'] ?></option>
             <?php 
                 }
             }
@@ -54,13 +54,14 @@
         </select> <br><br>
         Docente <br>
         <select name="Docente" required="">
-            <option value="<?php echo $Info['MATERIA'] ?>"><?php echo $Info['MATERIA'] ?></option>
+            <option value="<?php echo $Info['DOCENTE'] ?>"><?php echo $Info['DOCENTE'] ?></option>
             <?php
-            $Materias = $ModeloMetodos->getMaterias();
-            if($Materias != null){
-                foreach($Materias as $Materia){
+            $Docentes = $ModeloMetodos->getDocentes();
+            if($Docentes != null){
+                foreach($Docentes as $Docente){
             ?>
-            <option value="<?php echo $Info['MATERIA'] ?>"><?php echo $Info['MATERIA'] ?></option>
+            <option value="<?php echo $Docente['NOMBRE'].' '.$Docente['APELLIDO'] ?>">
+                <?php echo $Docente['NOMBRE'].' '.$Docente['APELLIDO'] ?></option>
             <?php 
                 }
             }
@@ -68,7 +69,8 @@
             
         </select> <br><br>
         Promedio <br>
-        <input type="number" name="Promedio" required="" autocomplete="off" placeholder="Promedio"> <br><br>
+        <input type="number" name="Promedio" required="" autocomplete="off" placeholder="Promedio"
+            value="<?php echo $Info['PROMEDIO'] ?>"> <br><br>
         <?php
                 }
             }
