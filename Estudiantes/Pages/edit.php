@@ -21,7 +21,7 @@
     <h1>Registrar Estudiante </h1>
     <form method="POST" action="../Controladores/edit.php">
         <input type="hidden" name="Id" value="<?php echo $Id; ?>">
-        <?php
+        <?php // Mostramos en los campos la informacion previa de ese estudiante
             if($InformacionEstudiante != null){
                 foreach($InformacionEstudiante as $Info ){ 
             
