@@ -1,2 +1,3 @@
 # PHP_SISTEMAS_NOTAS
-Proyecto realizado en PHP con base de datos MySQL, trate de un Sistema de notas de estudiantes y registro de usuarios.
+<p>Proyecto realizado en PHP con base de datos MySQL, implementando el patron Modelo Vista Controlador MVC. </p>
+<p>trata acerca de un Sistema de notas de estudiantes y registro de usuarios.</p>
