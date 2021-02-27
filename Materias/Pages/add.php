@@ -1,3 +1,12 @@
+<?
+    require_once('../../Usuarios/Modelo/Usuarios.php');
+
+    $ModeloUsuarios = new Usuarios();
+    $ModeloUsuarios->validateSession();
+
+    
+
+?>
 <html>
 <head> 
     <title>SISTEMA DE NOTAS</title>
