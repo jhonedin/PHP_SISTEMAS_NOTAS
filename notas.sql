@@ -1,3 +1,4 @@
+
 -- phpMyAdmin SQL Dump
 -- version 5.0.4
 -- https://www.phpmyadmin.net/
@@ -28,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `estudiantes` (
-  `ID_ESTUDIANTE` int(15) NOT NULL,
+  `ID_ESTUDIANTE` SERIALIZABLE(15) NOT NULL,
   `NOMBRE` varchar(60) COLLATE utf8_bin NOT NULL,
   `APELLIDO` varchar(60) COLLATE utf8_bin NOT NULL,
   `DOCUMENTO` varchar(12) COLLATE utf8_bin NOT NULL,
