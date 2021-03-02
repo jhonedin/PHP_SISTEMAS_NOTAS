@@ -48,10 +48,12 @@ class Administradores extends conexion {
     public function update($Id, $Nombre, $Apellido, $Usuario, $Contrasena, $Estado){
         $statement = $this->db->prepare("UPDATE usuarios SET NOMBRE= :Nombre, APELLIDO = :Apellido,
             USUARIO = :Usuario, CONTRASENA= :Contrasena, ESTADO = :Estado WHERE ID_USUARIO = :Id ");
+        $statement->bindParam(':Id',$Id);
         $statement->bindParam(':Nombre',$Nombre);
         $statement->bindParam(':Apellido',$Apellido);
         $statement->bindParam(':Usuario',$Usuario);
         $statement->bindParam(':Contrasena',$Contrasena);
+        $statement->bindParam(':Estado',$Estado);
         if($statement->execute()){
             header('Location: ../Pages/index.php');
         }else{
