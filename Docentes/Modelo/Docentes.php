@@ -5,7 +5,7 @@ require_once('../../conexion.php');
 class Docentes extends conexion{
 
     public function __construct(){
-        $this->db = parent::__construct(); // de la clase padre heredamos el constructor. 
+        $this->db = parent::open();// De la clase padre traemos el metodo que abre la conexion
     }
 
     public function add($Nombre, $Apellido, $Usuario, $Password){
