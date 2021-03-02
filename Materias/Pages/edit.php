@@ -15,7 +15,7 @@
 </head>
 <body> 
     <h1>Editar Materia </h1>
-    <form method="POST" action="../Controladores/add.php">
+    <form method="POST" action="../Controladores/edit.php">
         <input type="hidden" name="Id" value="<?php echo $Id?>">
         <?php 
             if($InformacionMateria != null){

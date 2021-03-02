@@ -9,11 +9,11 @@ class Usuarios extends Conexion{
         $this->db = parent::open(); 
     }
 
-    public function login($Usuario,$Password){ // metodo login para iniciar sesion
+    public function login($Usuario,$Contrasena){ // metodo login para iniciar sesion
        
-        $statement = $this->db->prepare("SELECT * FROM usuarios WHERE USUARIO = :Usuario AND PASSWORD = :Password");
+        $statement = $this->db->prepare("SELECT * FROM usuarios WHERE USUARIO = :Usuario AND CONTRASENA = :Contrasena");
         $statement->bindParam(':Usuario',$Usuario);
-        $statement->bindParam(':Password',$Password);
+        $statement->bindParam(':Contrasena',$Contrasena);
         $statement->execute();
         if($statement->rowCount() == 1){
             $result = $statement->fetch();

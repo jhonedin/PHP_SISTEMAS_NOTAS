@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `estudiantes` (
-  `ID_ESTUDIANTE` SERIALIZABLE(15) NOT NULL,
+  `ID_ESTUDIANTE` SERIAL,
   `NOMBRE` varchar(60) COLLATE utf8_bin NOT NULL,
   `APELLIDO` varchar(60) COLLATE utf8_bin NOT NULL,
   `DOCUMENTO` varchar(12) COLLATE utf8_bin NOT NULL,
@@ -37,7 +37,8 @@ CREATE TABLE `estudiantes` (
   `MATERIA` varchar(30) COLLATE utf8_bin NOT NULL,
   `DOCENTE` varchar(60) COLLATE utf8_bin NOT NULL,
   `PROMEDIO` int(3) NOT NULL,
-  `FECHA_REGISTRO` date NOT NULL
+  `FECHA_REGISTRO` date NOT NULL,
+  PRIMARY KEY (ID_ESTUDIANTE)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -47,8 +48,9 @@ CREATE TABLE `estudiantes` (
 --
 
 CREATE TABLE `materias` (
-  `ID_MATERIA` int(15) NOT NULL,
-  `MATERIA` varchar(30) COLLATE utf8_bin NOT NULL
+  `ID_MATERIA` SERIAL,
+  `MATERIA` varchar(30) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (ID_MATERIA)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -58,31 +60,16 @@ CREATE TABLE `materias` (
 --
 
 CREATE TABLE `usuarios` (
-  `ID_USUARIO` int(15) NOT NULL,
+  `ID_USUARIO` SERIAL,
   `NOMBRE` varchar(60) COLLATE utf8_bin NOT NULL,
   `APELLIDO` varchar(60) COLLATE utf8_bin NOT NULL,
   `USUARIO` varchar(40) COLLATE utf8_bin NOT NULL,
-  `PASSWORD` varchar(80) COLLATE utf8_bin NOT NULL,
+  `CONTRASENA` varchar(80) COLLATE utf8_bin NOT NULL,
   `PERFIL` varchar(30) COLLATE utf8_bin NOT NULL,
-  `ESTADO` varchar(20) COLLATE utf8_bin NOT NULL
+  `ESTADO` varchar(20) COLLATE utf8_bin NOT NULL,
+   PRIMARY KEY (ID_USUARIO)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `materias`
---
-ALTER TABLE `materias`
-  ADD PRIMARY KEY (`ID_MATERIA`);
-
---
--- Indices de la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`ID_USUARIO`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

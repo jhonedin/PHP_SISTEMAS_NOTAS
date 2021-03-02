@@ -20,7 +20,7 @@
             <option value="Activo">Activo</option>
             <option value="Inactivo">Inactivo</option>
         </select> <br><br>
-        <input type="submit" value="Registrar Administrador">
+        <input type="submit" value="Editar Administrador">
     </form>
 </body>
 </html>
