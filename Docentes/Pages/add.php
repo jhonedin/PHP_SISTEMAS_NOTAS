@@ -1,3 +1,11 @@
+<?php
+    require_once('../../Usuarios/Modelo/Usuarios.php');
+
+    $ModeloUsuarios = new Usuarios();
+    $ModeloUsuarios->validateSession();
+
+    
+?>
 <html>
 <head> 
     <title>SISTEMA DE NOTAS</title>
@@ -12,7 +20,7 @@
         Usuario <br>
         <input type="text" name="Usuario" required="" autocomplete="off" placeholder="Usuario"> <br><br>
         Password <br>
-        <input type="password" name="Pasword" required="" autocomplete="off" placeholder="Pasword"> <br><br>
+        <input type="password" name="Contrasena" required="" autocomplete="off" placeholder="Password"> <br><br>
         <input type="submit" value="Registrar Docente">
     </form>
 </body>

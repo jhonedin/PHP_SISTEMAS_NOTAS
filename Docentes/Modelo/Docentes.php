@@ -8,13 +8,13 @@ class Docentes extends conexion{
         $this->db = parent::open();// De la clase padre traemos el metodo que abre la conexion
     }
 
-    public function add($Nombre, $Apellido, $Usuario, $Password){
-        $statement = $this->db->prepare("INSERT INTO usuarios (NOMBRE,APELLIDO,USUARIO, PASSWORD, PERFIL, ESTADO)
-            VALUES (:Nombre, :Apellido, :Usuario, :Password, 'Administrador', 'Activo')");
+    public function add($Nombre, $Apellido, $Usuario, $Contrasena){
+        $statement = $this->db->prepare("INSERT INTO usuarios (NOMBRE,APELLIDO,USUARIO, CONTRASENA, PERFIL, ESTADO)
+            VALUES (:Nombre, :Apellido, :Usuario, :Contrasena, 'Docente', 'Activo')");
         $statement->bindParam(':Nombre',$Nombre);
         $statement->bindParam(':Apellido',$Apellido);
         $statement->bindParam(':Usuario',$Usuario);
-        $statement->bindParam(':Password',$Password);
+        $statement->bindParam(':Contrasena',$Contrasena);
         if($statement->execute()){
             header('Location: ../Pages/index.php');
         }else{
@@ -46,13 +46,13 @@ class Docentes extends conexion{
 
     }
 
-    public function update($Id, $Nombre, $Apellido, $Usuario, $Password, $Estado){
+    public function update($Id, $Nombre, $Apellido, $Usuario, $Contrasena, $Estado){
         $statement = $this->db->prepare("UPDATE usuarios SET NOMBRE= :Nombre, APELLIDO = :Apellido,
-            USUARIO = :Usuario, PASSWORD= :Password, ESTADO = :Estado WHERE ID_USUARIO = :Id ");
+            USUARIO = :Usuario, CONTRASENA= :Contrasena, ESTADO = :Estado WHERE ID_USUARIO = :Id ");
         $statement->bindParam(':Nombre',$Nombre);
         $statement->bindParam(':Apellido',$Apellido);
         $statement->bindParam(':Usuario',$Usuario);
-        $statement->bindParam(':Password',$Password);
+        $statement->bindParam(':Contrasena',$Contrasena);
         if($statement->execute()){
             header('Location: ../Pages/index.php');
         }else{
