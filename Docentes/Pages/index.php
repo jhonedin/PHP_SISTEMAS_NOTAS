@@ -2,7 +2,7 @@
     require_once('../../Usuarios/Modelo/Usuarios.php');
     require_once('../Modelo/Docentes.php');
     $ModeloUsuarios = new Usuarios();
-    $ModeloUsuarios->validateSession();
+    $ModeloUsuarios->validateSessionAdministrador();
 
     $ModeloDocentes = new Docentes();
 ?>
@@ -21,6 +21,7 @@
             <li><a href="#">Docentes</a></li>
             <li><a href="../../Materias/Pages/index.php">Materias</a></li>
             <li><a href="../../Estudiantes/Pages/index.php">Estudiantes</a></li>
+            <li><a href="../../Usuarios/Controladores/salir.php">Salir</a></li>
         </ul>
     </nav>
     <main>

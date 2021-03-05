@@ -47,10 +47,17 @@ class Usuarios extends Conexion{
         if($_SESSION['ID'] != null){
             if($_SESSION['PERFIL'] == 'Docente'){
                 header('Location: ../../Estudiantes/Pages/index.php');
-            }else{
-                header('Location: ../../index.php');
             }
         }
+    }
+
+    // Funcion publica para cerrar la sesion del usuario
+    public function salir(){
+        $_SESSION['ID'] = null;
+        $_SESSION['NOMBRE'] = null;
+        $_SESSION['PERFIL'] = null;
+        session_destroy();
+        header('Location: ../../index.php');
     }
 }
 

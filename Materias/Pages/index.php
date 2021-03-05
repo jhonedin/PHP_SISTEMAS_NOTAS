@@ -2,7 +2,7 @@
     require_once('../../Usuarios/Modelo/Usuarios.php');
     require_once('../Modelo/Materias.php');
     $ModeloUsuarios = new Usuarios();
-    $ModeloUsuarios->validateSession();
+    $ModeloUsuarios->validateSessionAdministrador(); // El modulo de materias solo puede ser accedido por el administrador
 
     $Modelo = new Materias();
 ?>
@@ -21,6 +21,7 @@
             <li><a href="../../Docentes/Pages/index.php">Docentes</a></li>
             <li><a href="#">Materias</a></li>
             <li><a href="../../Estudiantes/Pages/index.php">Estudiantes</a></li>
+            <li><a href="../../Usuarios/Controladores/salir.php">Salir</a></li>
         </ul>
     </nav>   
     <main>

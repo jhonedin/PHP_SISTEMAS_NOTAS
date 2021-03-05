@@ -22,13 +22,28 @@
         <h1>SISTEMAS DE NOTAS </h1>
     </header>
     <nav>
+        <?php 
+            if($ModeloUsuarios->getPerfil() == 'Docente'){
+        ?>
+        <ul>
+            <li><a href="#">Estudiantes</a></li>
+            <li><a href="#">Salir</a></li>
+        </ul>
+        <?php
+            }else{
+        ?>
         <ul>
             <li><a href="../../Administradores/Pages/index.php">Administradores</a></li>
             <li><a href="../../Docentes/Pages/index.php">Docentes</a></li>
             <li><a href="../../Materias/Pages/index.php">Materias</a></li>
             <li><a href="#">Estudiantes</a></li>
+            <li><a href="../../Usuarios/Controladores/salir.php">Salir</a></li>
         </ul>
+        <?php
+            }
+        ?>
     </nav>
+    <h3>Usted ha iniciado sesión como: <?php echo $ModeloUsuarios->getNombre()?> - <?php echo $ModeloUsuarios->getPerfil()?> </h3>
     <main>
         <h2>Estudiantes</h2>
         <a href="add.php" target="_blank">Registrar Estudiante</a>
