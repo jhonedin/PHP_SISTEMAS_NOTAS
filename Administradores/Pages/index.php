@@ -22,9 +22,10 @@
             <li><a href="../../Docentes/Pages/index.php">Docentes</a></li>
             <li><a href="../../Materias/Pages/index.php">Materias</a></li>
             <li><a href="../../Estudiantes/Pages/index.php">Estudiantes</a></li>
-            <<li><a href="../../Usuarios/Controladores/salir.php">Salir</a></li>
+            <li><a href="../../Usuarios/Controladores/salir.php">Salir</a></li>
         </ul>
     </nav>
+    <h3>Usted ha iniciado sesión como: <?php echo $ModeloUsuarios->getNombre()?> - <?php echo $ModeloUsuarios->getPerfil()?> </h3>
     <main>
         <h2>Administradores </h2>
         <a href="add.php" target="_blank">Registrar Administrador</a>

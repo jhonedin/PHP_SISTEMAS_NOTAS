@@ -24,6 +24,7 @@
             <li><a href="../../Usuarios/Controladores/salir.php">Salir</a></li>
         </ul>
     </nav>   
+    <h3>Usted ha iniciado sesión como: <?php echo $ModeloUsuarios->getNombre()?> - <?php echo $ModeloUsuarios->getPerfil()?> </h3>
     <main>
         <h2>Materias</h2>
         <a href="add.php" target="_blank">Registrar Materia</a>

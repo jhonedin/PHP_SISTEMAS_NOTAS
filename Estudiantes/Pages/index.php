@@ -27,7 +27,7 @@
         ?>
         <ul>
             <li><a href="#">Estudiantes</a></li>
-            <li><a href="#">Salir</a></li>
+            <li><a href="../../Usuarios/Controladores/salir.php">Salir</a></li>
         </ul>
         <?php
             }else{
