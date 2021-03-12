@@ -10,6 +10,7 @@
 <html>
 <head> 
     <title>SISTEMA DE NOTAS</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header> 
