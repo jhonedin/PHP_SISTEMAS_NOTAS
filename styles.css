@@ -34,6 +34,8 @@ footer h6 {
   position: absolute;   
 }
 
+/* CSS ASOCIADO AL LOGIN */
+
 .login-box {
     width: 500px;
     height: 400px;
@@ -113,3 +115,175 @@ footer h6 {
     color: #fff;
   }
 
+/* CSS ASOCIADO AL MENU DE NAVEGACION */
+
+nav {
+  height: 60px;
+  background-color:#17181C;
+  text-align: center;
+}
+
+.main-nav {
+  list-style: none;
+  padding:18px;  
+}
+
+.main-nav__item {
+  display: inline-block;
+}
+
+.main-nav__item a { /* Indica que especificamente se afecta todas las etiquetas "a" que esta dentro de .main-nav__item */
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 18px;
+}
+
+.main-nav__item a:hover {
+  color: red;
+}
+
+.main-nav__item a:active {
+  color: blue;
+}
+
+/* EJEMPLOS DE ELEMENTOS */
+/*Se mandan a llamar con :: */
+
+.main-nav__item a::after {
+  content: "   ";
+}
+
+
+/* css asociado a la información sobre el la sesion nombre y tipo del usuario */
+.info-sesion {
+  color: #fff;
+}
+
+/*Css para indicar el modulo en el que se encuentra*/
+
+.modulo-presente {
+  color: #fff; /*Pone color blanco al texto que indica el modulo donde se encuentra*/
+}
+
+/*CSS del boton de agregar elemento en el modulo presente */
+.box-add {
+  background-color: #fff;
+  width: 200px;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding: 10px;
+}
+
+.box-add:hover {
+  background-color: #ffc107;
+}
+
+.box-add a { /* Indica que especificamente se afecta todas las etiquetas "a" que esta dentro de .main-nav__item */
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 12px;
+}
+
+.box-add a:hover {
+  color:red;
+}
+
+.box-add a:active {
+  color: blue;
+}
+
+/* CSS asociado a las tablas */
+
+.table-box {
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow:scroll;
+  height:200px;
+  width: 99%;
+}
+
+.table-box table {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  background-color: #fff;
+  width: 99%;
+  
+}
+
+.table-box table th {
+  background-color: yellow;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding:5px; 
+}
+
+.table-box table tr {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+
+
+.table-box table tr:hover  {
+  background: rgb(238, 233, 233);
+}
+
+.table-box table td {
+  align-content: center;
+  padding-left: 5px;
+}
+
+/*CSS asociado a los botones editar y eliminar de cada registro de las tablas */
+
+.nav-edit-delete {
+  list-style: none;
+  padding:2px;  
+
+}
+
+.nav-edit-delete_item-edit {
+  background-color: greenyellow;
+  display: inline-block;
+  padding: 2px;
+  border-radius: 5px;
+
+}
+
+.nav-edit-delete_item-edit a { 
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 1px;
+  
+}
+
+.nav-edit-delete_item-edit a:hover {
+  color: blue;
+}
+
+.nav-edit-delete_item-delete {
+  background-color: red;
+  display: inline-block;
+  padding: 1px;
+  border-radius: 5px;
+
+}
+
+.nav-edit-delete_item-delete a { 
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 1px;
+}
+
+.nav-edit-delete_item-delete a:hover {
+  color: yellow;
+}
