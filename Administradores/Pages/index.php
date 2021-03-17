@@ -71,8 +71,8 @@
                     <td>
                         <div>
                             <ul class="nav-edit-delete">
-                                <li class="nav-edit-delete_item-edit"><a href="edit.php?Id=<?php echo $Administrador['ID_USUARIO'] ?>" target="_blank">Editar</a>
-                                <li class="nav-edit-delete_item-delete"><a href="delete.php?Id=<?php echo $Administrador['ID_USUARIO'] ?>" target="_blank">Eliminar</a>
+                                <li class="nav-edit-delete_item-edit"><a href="edit.php?Id=<?php echo $Administrador['ID_USUARIO'] ?>" target="_blank">Editar</a></li>
+                                <li class="nav-edit-delete_item-delete"><a href="delete.php?Id=<?php echo $Administrador['ID_USUARIO'] ?>" target="_blank">Eliminar</a></li>
                             </ul>
                         </div>
                     </td>   
