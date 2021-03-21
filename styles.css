@@ -34,6 +34,10 @@ footer h6 {
   position: absolute;   
 }
 
+#add-Estudiantes {
+  color: white;
+}
+
 /* CSS ASOCIADO AL LOGIN */
 
 .login-box {
@@ -287,3 +291,98 @@ nav {
 .nav-edit-delete_item-delete a:hover {
   color: yellow;
 }
+
+/*   */
+
+#add-Estudiantes {
+  color: white;
+}
+
+.title-createnew { 
+    color: white;
+    text-align: center; 
+   
+  }
+
+.formularios { 
+  
+  padding: 50px;
+  cursor:pointer;
+  width: 350px;
+  height: 300px;
+  margin: auto;
+  text-align: left;
+  background-color: #fff;
+}
+
+.formularios label {
+   color: blue;
+   font-weight: bold;
+}
+
+.formularios label {
+  color: blue;
+  font-weight: bold;
+}
+
+.formularios input[type=submit] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 80px;
+}
+
+.formularios input[type=submit]:hover {
+  background-color: red;
+  color:black;
+}
+
+#inputNombreEstudiantes {
+  width: 200px;
+  margin-left: 32px;
+}
+
+#inputApellidoEstudiantes {
+  width: 200px;
+  margin-left: 30px;
+}
+
+#inputDocumentoEstudiantes {
+  width: 200px;
+  margin-left: 6px;
+}
+
+#inputEmailEstudiantes {
+  width: 200px;
+  margin-left: 42px;
+}
+
+#selectMateriaEstudiantes {
+  width: 207px;
+  margin-left: 40px;
+}
+
+#selectDocenteEstudiantes {
+  width: 207px;
+  margin-left: 34px;
+}
+
+#inputPromedioEstudiantes {
+  width: 200px;
+  margin-left: 25px; 
+}
+
+.formularios input[type=number] {
+  width: 200px;
+  margin-left: 10px;
+}
+
+.formularios input[type=email] {
+  width: 200px;
+  margin-left: 10px;
+}
+
