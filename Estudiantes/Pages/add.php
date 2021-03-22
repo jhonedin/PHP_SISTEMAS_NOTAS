@@ -21,13 +21,6 @@
 
     <title>SISTEMA DE NOTAS</title>
     <link type="text/css" rel="stylesheet" href="../../styles.css">
-    <style>
-        .formularios label {
-   <color-tex></color-tex>
-}
-    </style>
-    
-
 </head>
 <body>
     <header> 
