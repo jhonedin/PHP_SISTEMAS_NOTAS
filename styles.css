@@ -393,6 +393,16 @@ nav {
 }
 /****************************************************/
 
+#textEliminarEstudiante {
+  color: red;
+  text-align: center;  
+  font-weight: bold;
+  font-size: 20px;
+  margin: 25px;
+  padding: 20px;
+}
+
+
 /* CSS ASOCIADO AL FORMULARIO EDITAR EN EL MODULO DE ESTUDIANTES 
 .formularioEditEstudiante {
   padding: 50px;
