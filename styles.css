@@ -300,11 +300,17 @@ nav {
 
 .title-createnew { 
     color: white;
+    text-align: center;    
+}
+
+.title-editEstudiantes { 
+    color: white;
     text-align: center; 
    
-  }
+}
 
-.formularios { 
+/* CSS relacionado al formulario de agregar un nuevo estudiante */
+.formularioEstudiante  { 
   
   padding: 50px;
   cursor:pointer;
@@ -315,17 +321,17 @@ nav {
   background-color: #fff;
 }
 
-.formularios label {
+.formularioEstudiante label {
    color: blue;
    font-weight: bold;
 }
 
-.formularios label {
+.formularioEstudiante label {
   color: blue;
   font-weight: bold;
 }
 
-.formularios input[type=submit] {
+.formularioEstudiante input[type=submit] {
   background-color: #4CAF50;
   border: none;
   color: white;
@@ -336,7 +342,7 @@ nav {
   margin-left: 80px;
 }
 
-.formularios input[type=submit]:hover {
+.formularioEstudiante input[type=submit]:hover {
   background-color: red;
   color:black;
 }
@@ -376,13 +382,61 @@ nav {
   margin-left: 25px; 
 }
 
-.formularios input[type=number] {
+.formularioEstudiante input[type=number] {
   width: 200px;
   margin-left: 10px;
 }
 
-.formularios input[type=email] {
+.formularioEstudiante input[type=email] {
+  width: 200px;
+  margin-left: 10px;
+}
+/****************************************************/
+
+/* CSS ASOCIADO AL FORMULARIO EDITAR EN EL MODULO DE ESTUDIANTES 
+.formularioEditEstudiante {
+  padding: 50px;
+  cursor:pointer;
+  width: 350px;
+  height: 400px;
+  margin: auto;
+  text-align: left;
+  background-color: #fff;
+}
+
+.formularioEditEstudiante input[type=number] {
   width: 200px;
   margin-left: 10px;
 }
 
+.formularioEditEstudiante input[type=email] {
+  width: 200px;
+  margin-left: 10px;
+}
+
+.formularioCreateEstudiante label {
+  color: blue;
+  font-weight: bold;
+}
+
+.formularioCreateEstudiante label {
+ color: blue;
+ font-weight: bold;
+}
+
+.formularioCreateEstudiante input[type=submit] {
+ background-color: #4CAF50;
+ border: none;
+ color: white;
+ padding: 12px 25px;
+ text-decoration: none;
+ margin: 4px 2px;
+ cursor: pointer;
+ margin-left: 80px;
+}
+
+.formularioCreateEstudiante input[type=submit]:hover {
+ background-color: red;
+ color:black;
+}
+*/

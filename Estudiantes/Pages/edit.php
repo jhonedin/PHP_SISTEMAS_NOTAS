@@ -14,32 +14,52 @@
 ?>
 <!DOCTYPE html>
 <html>
-<head> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">  
+
     <title>SISTEMA DE NOTAS</title>
+    <link type="text/css" rel="stylesheet" href="../../styles.css">
+    <style>
+        .title-editEstudiantes { 
+        color: white;
+        text-align: center; 
+   
+        }
+    </style>
 </head>
 <body> 
-    <h1>Registrar Estudiante </h1>
-    <form method="POST" action="../Controladores/edit.php">
+    <header> 
+        <h1>SISTEMAS DE NOTAS </h1>
+    </header> 
+    <h2 class="title-editEstudiantes">Editar Estudiante </h2>
+    <form class="formularioEstudiante" method="POST" action="../Controladores/edit.php">
         <input type="hidden" name="Id" value="<?php echo $Id; ?>">
         <?php // Mostramos en los campos la informacion previa de ese estudiante
             if($InformacionEstudiante != null){
                 foreach($InformacionEstudiante as $Info ){ 
             
         ?>
-        Nombre <br>
-        <input type="text" name="Nombre" required="" autocomplete="off" placeholder="Nombre"
+        <label>Nombre:</label> 
+        <input id="inputNombreEstudiantes" type="text" name="Nombre" required="" autocomplete="off" placeholder="Nombre"
             value="<?php echo $Info['NOMBRE'] ?>"><br><br>
-        Apellido <br>
-        <input type="text" name="Apellido" required="" autocomplete="off" placeholder="Apellido"
+        <label>Apellido:</label>
+        <input id="inputApellidoEstudiantes" type="text" name="Apellido" required="" autocomplete="off" placeholder="Apellido"
             value="<?php echo $Info['APELLIDO'] ?>"> <br><br>
-        Documento <br>
-        <input type="text" name="Documento" required="" autocomplete="off" placeholder="Documento"
+        <label>Documento:</label>
+        <input id="inputDocumentoEstudiantes" type="text" name="Documento" required="" autocomplete="off" placeholder="Documento"
             value="<?php echo $Info['DOCUMENTO'] ?>"> <br><br>
-        Correo <br>
-        <input type="email" name="Correo" required="" autocomplete="off" placeholder="Correo"
+        <label>Correo:</label>
+        <input id="inputEmailEstudiantes" type="email" name="Correo" required="" autocomplete="off" placeholder="Correo"
             value="<?php echo $Info['CORREO'] ?>"> <br><br>
-        Materia <br>
-        <select name="Materia" required="">
+        <label>Materia:</label>
+        <select id="selectMateriaEstudiantes" name="Materia" required="">
             <option value="<?php echo $Info['MATERIA'] ?>"><?php echo $Info['MATERIA'] ?></option>
             <?php
             $Materias = $ModeloMetodos->getMaterias();
@@ -52,8 +72,8 @@
             }
             ?>
         </select> <br><br>
-        Docente <br>
-        <select name="Docente" required="">
+        <label>Docente:</label>
+        <select id="selectDocenteEstudiantes" name="Docente" required="">
             <option value="<?php echo $Info['DOCENTE'] ?>"><?php echo $Info['DOCENTE'] ?></option>
             <?php
             $Docentes = $ModeloMetodos->getDocentes();
@@ -68,8 +88,8 @@
             ?>
             
         </select> <br><br>
-        Promedio <br>
-        <input type="number" name="Promedio" required="" autocomplete="off" placeholder="Promedio"
+        <label>Promedio:</label>
+        <input id="inputPromedioEstudiantes" type="number" name="Promedio" required="" autocomplete="off" placeholder="Promedio"
             value="<?php echo $Info['PROMEDIO'] ?>"> <br><br>
         <?php
                 }

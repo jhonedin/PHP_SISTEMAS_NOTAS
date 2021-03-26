@@ -27,7 +27,7 @@
         <h1>SISTEMAS DE NOTAS </h1>
     </header> 
     <h2 class="title-createnew">Registrar Estudiantes</h2>
-    <form class="formularios" method="POST" action="../Controladores/add.php">
+    <form class="formularioEstudiante" method="POST" action="../Controladores/add.php">
         <label>Nombre:</label> 
         <input  id="inputNombreEstudiantes" type="text" name="Nombre" required="" autocomplete="off" placeholder="Nombre"><br><br>
         <label>Apellido:</label> 
